@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Vul je naam in</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.naam.label(class="form-label") }}
+        {{ form.naam(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.verzenden(class="btn btn-success") }}
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Welkom{% endblock %}
+
+{% block content %}
+<h1>Welkom, {{ naam }}!</h1>
+<p><a href="{{ url_for('index') }}" class="btn btn-primary">Terug naar beginscherm</a></p>
+{% endblock %}
