@@ -26,6 +26,14 @@ def formulier():
         return redirect(url_for('welkom', naam=naam))
     return render_template('formulier.html', form=form)
 
+@app.route("/bungalows")
+def bungalows():
+    return render_template('bungalows.html')
+
+@app.route("/bungalow/<naam>")
+def bungalow(naam):
+    return render_template('bungalow.html',  naam=naam)
+
 @app.route('/welkom/<naam>')
 def welkom(naam):
     return render_template('welkom.html', naam=naam)
