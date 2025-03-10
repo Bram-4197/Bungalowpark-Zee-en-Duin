@@ -2,4 +2,18 @@
 
 {% block content %}
 <h1>bungalows</h1>
+{% for bungalow in bungalows %}
+
+    <h1>{{ bungalow.title }}</h1>
+
+    <!-- Controleer of de bungalow een afbeelding heeft -->
+    {% if bungalow.fileLocation %}
+        <h3>Afbeelding:</h3>
+        <img src="{{ url_for('static', filename=bungalow.fileLocation) }}" alt="Bungalow Image" width="300">
+    {% else %}
+        <p>Er is geen afbeelding voor deze bungalow.</p>
+    {% endif %}
+
+</div>
+{% endfor %}
 {% endblock %}
